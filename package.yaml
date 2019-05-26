@@ -28,6 +28,9 @@ library:
     - split
     - lens
     - flow
+    - gi-gtk
+    - gi-gtk-declarative
+    - gi-gtk-declarative-app-simple
 
 executables:
   tsuro-exe:
