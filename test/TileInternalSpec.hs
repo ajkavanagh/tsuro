@@ -1,11 +1,11 @@
-module TileSpec where
+module TileInternalSpec where
 
-import Test.Hspec        (Spec, describe, it, shouldBe, xit, pending)
+import           Test.Hspec (Spec, describe, it, pending, shouldBe, xit)
 
-import Data.List         (sort)
-import Data.Set          (fromList)
+import           Data.List  (sort)
+import           Data.Set   (fromList)
 
-import Tile
+import           Tile.Internal
 
 tileSpecs :: Spec
 tileSpecs = do
@@ -43,6 +43,7 @@ tileSpecs = do
         it "rotated tiles should be unique and not in uniqueTiles" $ do
             let rotated = concatMap (tail.rotatedTilesSet) uniqueTiles
             all (`notElem` uniqueTiles) rotated && not (null rotated)
+
 
 
 consistentTile :: Integral a => [a] -> Bool

@@ -1,3 +1,3 @@
 module GTile where
 
-import Graphics.Rendering.Cairo
+import           Graphics.Rendering.Cairo
