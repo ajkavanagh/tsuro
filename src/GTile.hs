@@ -1,3 +1,3 @@
-module Tiles where
+module GTile where
 
 import Graphics.Rendering.Cairo
