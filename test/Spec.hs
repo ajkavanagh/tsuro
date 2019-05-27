@@ -1,2 +1,12 @@
+import Test.Hspec        (Spec)
+import Test.Hspec.Runner (configFastFail, defaultConfig, hspecWith)
+
+
+import TileSpec
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = hspecWith defaultConfig {configFastFail = True} specs
+
+specs :: Spec
+specs = tileSpecs
+
